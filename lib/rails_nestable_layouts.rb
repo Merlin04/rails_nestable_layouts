@@ -46,9 +46,9 @@ module RailsNestableLayouts
 end
 
 ActiveSupport.on_load :action_controller do
-  ActionController::Base.send(:extend, RailsNestableLayouts::Controller)
+  extend RailsNestableLayouts::Controller
 end
 
 ActiveSupport.on_load :action_view do
-  ActionView::Base.send(:include, RailsNestableLayouts::Helpers)
+  include RailsNestableLayouts::Helpers
 end
