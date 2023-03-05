@@ -32,7 +32,7 @@ module RailsNestableLayouts
           @_current_layout = !@_current_layout ? layouts.first : layouts[layouts.index(@_current_layout)+1]
 
           if @_current_layout 
-            return render file: @_current_layout
+            return render template: @_current_layout
           else
             @_current_layout = nil
             return _layout_for
